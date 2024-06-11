@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlioDesktopApp", "KlioDesktopApp.csproj", "{55FD3F2F-C2CE-40AB-8FE8-77696AA08312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55FD3F2F-C2CE-40AB-8FE8-77696AA08312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FD3F2F-C2CE-40AB-8FE8-77696AA08312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FD3F2F-C2CE-40AB-8FE8-77696AA08312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FD3F2F-C2CE-40AB-8FE8-77696AA08312}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B117A302-1766-48B0-8E0B-1AE5C0707070}
+	EndGlobalSection
+EndGlobal

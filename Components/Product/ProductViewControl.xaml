@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="KlioDesktopApp.Components.Product.ProductViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KlioDesktopApp.Components.Product"
+             mc:Ignorable="d" 
+             d:DesignHeight="265" d:DesignWidth="230">
+    <Grid Background="Transparent" Margin="5 7 5 7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="Transparent"
+                Background="#FFFFFF"
+                CornerRadius="10 10 0 0">
+            <Ellipse Width="190" Height="190"
+                     Stroke="Transparent">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Assets/Images/pitsa.png"/>
+                </Ellipse.Fill>
+
+            </Ellipse>
+        </Border>
+
+        <Border Grid.Row="1" BorderBrush="Transparent"
+                Background="#FFFFFF"
+                CornerRadius="0 0 10 10">
+            <StackPanel Margin="8 0 8 0">
+                <Label x:Name="ProductName" Content="Pitsa Peperoni"
+                       Foreground="Black" FontFamily="Arial Black"
+                       Height="23" Padding="6 8 0 0 "/>
+                <Label x:Name="ProductDesc" Content="mazzali pitsa" 
+                       FontSize="8" FontFamily="Segoe Print" 
+                       Foreground="#CFCFCF" Padding="6 0 6 4"/>
+                <Button x:Name="btnProduct" Background="Transparent" BorderBrush="Transparent" 
+                        Width="30" Height="30" Margin="150 5 0 5">
+                    <Path Data="{DynamicResource  basket}"
+                      Fill="{DynamicResource GroupBorderColor}"
+                      VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

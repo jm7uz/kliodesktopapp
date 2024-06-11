@@ -1,0 +1,122 @@
+﻿<Window x:Class="KlioDesktopApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KlioDesktopApp"
+        mc:Ignorable="d"
+        Title="KlioWebApp"
+        WindowState="Normal"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Height="750" Width="1100"
+        Background="Transparent"
+        WindowStyle="None">
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" CornerRadius="10 10 0 0"
+                Background="{DynamicResource PrimaryBackground}"
+                BorderThickness="0 0 0 1">
+            <Grid Margin="10 0 10 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="65"/>
+                </Grid.ColumnDefinitions>
+                <Border x:Name="brDragable" 
+                    MouseDown="brDragable_MouseDown" 
+                    Grid.Column="0" 
+                    Background="{DynamicResource PrimaryBackground}"
+                    Cursor="ScrollAll">
+                </Border>
+                <StackPanel Grid.Column="1" 
+                Orientation="Horizontal">
+                    <Button x:Name="btnMinimize" Click="btnMinimize_Click" Style="{DynamicResource MinimizedButton}"/>
+                    <Button x:Name="btnClose" Click="btnClose_Click" Style="{DynamicResource CloseButton}"/>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.7*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Background="#F5F5F5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Width="25" 
+                Height="28" Margin="2" 
+                Visibility="Hidden" Background="Transparent" BorderBrush="Transparent"
+                Click="PreviewCategorie_Click" x:Name="PreviewCategorie">
+                        <Image Source="Assets/Images/left-arrow.png"/>
+                    </Button>
+                    <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Horizontal" x:Name="catles">
+
+                        </StackPanel>
+                    </ScrollViewer>
+                    <Button Grid.Column="2" Width="25" 
+                        Height="28" Margin="2" 
+                        Click="NextProduct_Click" Background="Transparent" BorderBrush="Transparent"
+                        x:Name="NextProduct">
+                        <Image Source="Assets/Images/right-arrow.png"/>
+                    </Button>
+                </Grid>
+                <Border Grid.Row="1" CornerRadius="0 0 0 10"
+                        Background="#F5F5F5">
+                    <ScrollViewer Margin="5 5 0 5">
+                        <WrapPanel x:Name="wpProducts">
+
+                        </WrapPanel>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+
+            <Border Grid.Column="1" Background="#FFFFFF" CornerRadius="0 0 10 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="110"/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Margin="5 5 0 5"
+             Grid.Row="0" VerticalScrollBarVisibility="Hidden">
+                        <StackPanel x:Name="BasketContainer" Margin="10">
+                            <!-- Your basket display controls will go here -->
+                        </StackPanel>
+                    </ScrollViewer>
+                    <Border Margin="15 15 15 0" Grid.Row="1" CornerRadius="15 15 0 0" Background="#F5F5F5">
+                        <Grid>
+                            <Label Content="Due" FontSize="16" 
+                           FontFamily="Arial Black"
+                           Margin="10"/>
+                            <Label x:Name="lbTotalBalance" Content="0$" FontSize="16" 
+                   FontFamily="Arial Black"
+                   Margin="15 10 15 10" Foreground="#F09246"
+                   HorizontalAlignment="Right"/>
+                            <ComboBox x:Name="printerComboBox" HorizontalAlignment="Left" 
+                                      Margin="13,58,0,0" VerticalAlignment="Top" 
+                                      Width="210"/>
+                            <Button x:Name="btnPrint" Width="40" Height="40" Background="Transparent"
+                                    BorderBrush="Transparent" 
+                                    Margin="230 50 0 0"
+                                    Click="PrintButton_Click">
+                                <Image Source="Assets/Images/printer.png"/>
+                            </Button>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

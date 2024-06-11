@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\left-arrow.png" />
+    <None Remove="Assets\Images\pitsa.png" />
+    <None Remove="Assets\Images\printer.png" />
+    <None Remove="Assets\Images\right-arrow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Assets\Icons\Icons.xaml" />
+    <Page Remove="Styles\ButtonStyles.xaml" />
+    <Page Remove="Themes\LightTheme.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Icons.xaml" />
+    <Resource Include="Assets\Images\left-arrow.png" />
+    <Resource Include="Assets\Images\pitsa.png" />
+    <Resource Include="Assets\Images\printer.png" />
+    <Resource Include="Assets\Images\right-arrow.png" />
+    <Resource Include="Styles\ButtonStyles.xaml" />
+    <Resource Include="Themes\LightTheme.xaml" />
+  </ItemGroup>
+
+</Project>
